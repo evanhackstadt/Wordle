@@ -2,14 +2,14 @@
 ### Wordle Project for coding practice
 
 f = open('5_char_words.txt')
-lines = f.readlines()
+dictionary = f.read.splitlines()
 f.close()
 
-def stripLast(str):
+'''def stripLast(str):
     outstr = ""
     for i in range(0, len(str)-1):
         outstr += str[i]
-    return outstr
+    return outstr'''
 
 def checkWord(word, answer):
     print(word)
@@ -42,9 +42,9 @@ def giveFeedback(word, answer):
 
 import random
 
-dictionary=[]
-for word in lines:
-    dictionary.append(stripLast(word))
+#dictionary=[]
+#for word in lines:
+    #dictionary.append(stripLast(word))
 
 answer = dictionary[random.randrange(0, len(dictionary))]
 print("Wordle: Enter a 5-letter word")
